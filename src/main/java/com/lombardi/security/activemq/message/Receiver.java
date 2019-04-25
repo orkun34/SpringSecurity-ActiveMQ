@@ -13,8 +13,10 @@ import static com.lombardi.security.activemq.config.JmsConfig.MAIL_TOPIC;
 @Component
 public class Receiver {
 
-    @JmsListener(destination = MAIL_TOPIC, containerFactory = "jmsListenerContainerFactory")
+    //@JmsListener(destination = MAIL_TOPIC, containerFactory = "jmsListenerContainerFactory")
+    @JmsListener(destination = MAIL_TOPIC)
     public void receiveMessage(Email email) {
         System.out.println("Received <" + email + ">");
     }
+
 }

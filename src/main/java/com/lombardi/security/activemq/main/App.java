@@ -3,6 +3,7 @@ package com.lombardi.security.activemq.main;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jms.core.JmsTemplate;
 
@@ -12,7 +13,7 @@ import org.springframework.jms.core.JmsTemplate;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "com.lombardi.security.activemq")
-public class App{
+public class App {
 
     @Autowired
     JmsTemplate jmsTemplate;
